@@ -35,7 +35,7 @@
 	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- //pop-ups-->
 	<link href="http://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
-
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
@@ -148,7 +148,7 @@
 									<div class="main">
 										<div class="form-left-to-w3l">
 
-											<input type="email" name="email" placeholder="邮箱：" required="">
+											<input type="email" name="email" placeholder="邮箱：">
 											<div class="clear"></div>
 										</div>
 										<div class="form-right-to-w3ls">
@@ -161,14 +161,14 @@
 
 										<div class="form-left-to-w3l">
 											<select class="form-control">
-					<option value="">性别Adopt Pet</option>
+					<option value="">性别：</option>
 						<option>男</option>
 						<option>女</option>
 					</select>
 										</div>
 										<div class="form-right-to-w3ls">
 											<select class="form-control">
-					<option value="">品种</option>
+					<option value="">品种：</option>
 						<option>斗牛犬</option>
 						<option>德牧</option>
 						<option>贵宾犬</option>
@@ -180,7 +180,7 @@
 
 									<div class="form-add-to-w3ls add">
 
-										<input type="text" name="address" placeholder="Street Address" required="">
+										<input type="text" name="address" placeholder="街道地址：" required="">
 										<div class="clear"></div>
 									</div>
 
@@ -188,31 +188,31 @@
 									<div class="main">
 										<div class="form-left-to-w3l">
 
-											<input type="text" name="city" placeholder="City" required="">
+											<input type="text" name="city" placeholder="城市：" required="">
 											<div class="clear"></div>
 										</div>
 										<div class="form-right-to-w3ls">
-											<input type="text" name="state" placeholder="State" required="">
+											<input type="text" name="state" placeholder="区：" required="">
 											<div class="clear"></div>
 										</div>
 
 									</div>
 									<div class="main">
 										<div class="form-left-to-w3l">
-											<input type="text" name="Pin code" placeholder="Pin code" required="">
+											<input type="text" name="Pin code" placeholder="邮政编码：" required="">
 											<div class="clear"></div>
 										</div>
 										<div class="form-right-to-w3ls">
 											<select class="form-control buttom">
 												<option value="">
-												Select Country</option>
-													<option value="category2">Oman</option>
-													<option value="category1">Australia</option>
-													<option value="category3">America</option>
-													<option value="category3">London</option>
-													<option value="category3">Goa</option>
-													<option value="category3">Canada</option>
-													<option value="category3">Srilanka</option>
+												选择国家</option>
+													<option value="category2">中国</option>
+													<option value="category1">澳大利亚</option>
+													<option value="category3">美国</option>
+													<option value="category3">伦敦</option>
+													<option value="category3">巴西</option>
+													<option value="category3">加拿大</option>
+													<option value="category3">斯里兰卡</option>
 												</select>
 
 											<div class="clear"></div>
@@ -221,12 +221,11 @@
 									</div>
 
 									<div class="form-control-w3l">
-										<textarea name="Message" placeholder="Why You Want Adopt Pet...?" required=""></textarea>
+										<textarea name="Message" placeholder="你想要什么宠物...?" required=""></textarea>
 									</div>
 									<div class="btnn">
-										<button type="submit">Submit</button><br>
+										<button id="submit" type="submit">提交</button><br>
 									</div>
-
 								</form>
 							</div>
 						</div>
@@ -243,27 +242,25 @@
 		<div class="container">
 			<div class="about-top-grids">
 				<div class="col-md-7 about-top-grid">
-					<h2>About Us </h2>
+					<h2>关于我们</h2>
 					<div class="arrow">
 						<ul>
 							<li><span class="fa fa-paw dog-arrow" aria-hidden="true"></span>
-								<p>Vivamus elementum semper </p>
+								<p>心灵伙伴 </p>
 							</li>
 							<li><span class="fa fa-paw dog-arrow" aria-hidden="true"></span>
-								<p>Bibendum sodales, augue </p>
+								<p>温柔的灵魂 </p>
 							</li>
 							<li><span class="fa fa-paw dog-arrow" aria-hidden="true"></span>
-								<p>Vivamus elementum semper </p>
+								<p>永恒的童真 </p>
 							</li>
 							<li><span class="fa fa-paw dog-arrow" aria-hidden="true"></span>
-								<p>Vivamus elementum semper </p>
+								<p>快乐的尾巴摇摆</p>
 							</li>
 						</ul>
 					</div>
 					<div class="about-para">
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-							natoque penatibus et magnis dis parturient montes, Aenean commodo ligula eget dolor. Aenean massa. Aenean commodo
-							ligula eget dolor. Aenean massa. nascetur ridiculus mus.</p>
+						<p>&emsp;&emsp;宠物是生活中的珍贵宝藏，它们无私地给予我们爱与快乐。它们的陪伴让我们感受到温暖和安宁，它们的忠诚让我们深感感动和敬佩。宠物的善良和纯真之心让世界充满了美好，它们的存在让我们的日常生活变得更加丰富和有意义。每次与宠物互动，我们都能感受到它们那无与伦比的喜悦和独特的魅力。宠物是我们最忠实的朋友，无论何时何地，它们都陪伴着我们，给予我们无尽的爱和快乐，成为我们生命中不可或缺的一部分。</p>
 					</div>
 				</div>
 				<div class="col-md-5 pope banner-agileits-btm" id="video">
@@ -286,7 +283,7 @@
 	<!--services-->
 	<div class="services" id="services">
 		<div class="container">
-			<h3 class="title clr">Services</h3>
+			<h3 class="title clr">服务</h3>
 
 			<div class="banner-bottom-girds ">
 				<div class="col-md-4  col-sm-6 col-xs-6  its-banner-grid">
@@ -294,7 +291,7 @@
 						<span class="fa fa-history banner-icon" aria-hidden="true"></span>
 					</div>
 					<div class=" white-shadow">
-						<h4>Pets Food</h4>
+						<h4>宠物粮食</h4>
 						<p>
 							tur aut.maiores alias consequatur .</p>
 						<div class="clearfix"> </div>
@@ -305,7 +302,7 @@
 						<span class="fa fa-thumbs-o-up  banner-icon" aria-hidden="true"></span>
 					</div>
 					<div class=" white-shadow">
-						<h4>Ear Cleaning</h4>
+						<h4>宠物清洁</h4>
 						<p>
 							tur aut.maiores alias consequatur .</p>
 						<div class="clearfix"> </div>
@@ -316,7 +313,7 @@
 						<span class="fa fa-check banner-icon" aria-hidden="true"></span>
 					</div>
 					<div class=" white-shadow">
-						<h4>Dog Wakling</h4>
+						<h4>养护</h4>
 						<p>
 							tur aut.maiores alias consequatur .</p>
 						<div class="clearfix"> </div>
@@ -327,7 +324,7 @@
 						<span class="fa fa-medkit banner-icon" aria-hidden="true"></span>
 					</div>
 					<div class="white-shadow">
-						<h4>24 Hour Care</h4>
+						<h4>24小时护理</h4>
 						<p>tur aut.maiores alias consequatur </p>
 					</div>
 					<div class="clearfix"> </div>
@@ -337,7 +334,7 @@
 						<span class="fa fa-eye banner-icon" aria-hidden="true"></span>
 					</div>
 					<div class=" white-shadow">
-						<h4>Veterinary Help</h4>
+						<h4>求助医生</h4>
 						<p>tur aut.maiores alias consequatur .</p>
 						<div class="clearfix"> </div>
 					</div>
@@ -347,7 +344,7 @@
 						<span class="fa fa-clock-o banner-icon" aria-hidden="true"></span>
 					</div>
 					<div class=" white-shadow">
-						<h4>Visting Hours</h4>
+						<h4>参观时间</h4>
 						<p>tur aut.maiores alias consequatur
 						</p>
 					</div>
@@ -360,7 +357,7 @@
 	<!--//services-->
 	<div class="portfolio" id="gallery">
 
-		<h3 class="title">Our Gallery</h3>
+		<h3 class="title">我们的画廊</h3>
 
 		<div class="sap_tabs">
 			<div id="horizontalTab">
